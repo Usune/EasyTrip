@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso CSS</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Link a documento CSS -->
+</head>
+<body>
+    <div class="imagen">
+        <div id="barra" class="flex-nav">
+            <a href="#">EasyTrip</a>
+            <div class="comprimir">
+                <button class="boton">Menú</button>
+                <div class="contenido">
+                    <a href="#info-empre">¿Quienes somos?</a>
+                    <a href="#contacto">Contactanos</a>
+                    <a href="#rutas">Rutas</a>
+                    <a href="#">Registrarse</a>
+                    <a href="inicioSesion.html">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+        <br> <br> <br> <br>
+        <h2 style="text-shadow: 0px 0px 2px #212529 ;color: #d4b30e; font-size: 3vh; margin-left: 2vw;">!Viajes tan únicos</h2> 
+        <h2 style="font-size: 4vh; margin-left: 2vw;">como su destino!</h2><br><br>
+        <h2 style="margin-left: 2vw; font-family: 'Courier New', Courier, monospace;">Llevamos más de 6 años brindando las mejores experiencias.</h2>
+    </div>
+
+    <div id="rutas">
+        <h2>Rutas disponibles</h2><br>
+
+        <button onclick="mostrar(1)">Bogotá - Cali</button>
+        <div id="info-ruta1">
+            <p>Cupos disponibles: 3</p><br><p>Hora de salida: 16:00</p><br><p>Valor por persona: $35.000</p>
+            <a href="#">Comprar</a>
+        </div>
+
+        <button onclick="mostrar(2)">Bogotá - Guayata</button>
+        <div id="info-ruta2">
+            <p>Cupos disponibles: 11</p><br><p>Hora de salida: 06:00</p><br><p>Valor por persona: $15.000</p>
+            <a href="#">Comprar</a>
+        </div>
+
+        <button onclick="mostrar(3)">Bogotá - Útica</button>
+        <div id="info-ruta3">
+            <p>Cupos disponibles: 8</p><br><p>Hora de salida: 04:00</p><br><p>Valor por persona: $23.000</p>
+            <a href="#">Comprar</a>
+        </div>
+    </div>
+
+    <div id="info-empre">
+        <h2>¿Quiénes somos?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, similique asperiores adipisci rem architecto ab quasi quae rerum cumque magnam ea dolore nam vero inventore soluta beatae error facere distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, perferendis dignissimos iste aspernatur, nemo laboriosam adipisci est, quidem voluptatibus sed in incidunt nam minus modi suscipit explicabo reprehenderit placeat saepe.</p>
+        <h3>Misión</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum non tempore, neque repellendus accusantium ad, voluptate quasi vel laudantium maxime consequuntur esse magni recusandae quia eaque corrupti ipsam ipsa hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente beatae delectus numquam asperiores nulla dolorem quo error inventore atque voluptatem, adipisci fuga modi neque, id similique doloremque pariatur laborum corporis?</p>
+        <h3>Visión</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum nulla rem veritatis, voluptatibus excepturi reprehenderit quo voluptatem officia alias ea, vero consectetur iste praesentium explicabo expedita a ipsa debitis. Magnam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quo sint nostrum molestiae ab enim neque suscipit incidunt, nobis dignissimos deserunt commodi facere dolores dolorum, dicta vitae, tempora provident iste.</p>
+    </div>
+
+    <div id="contacto">
+        <div>
+            <h2>Contactanos</h2>
+            <div id="cel">
+                <div>
+                    <img src="img/phone.svg" alt="Cel" width="60vw" height="60vh">
+                </div>
+                <div>
+                    <p>+57 3506798272</p><br><p>+57 3125124625</p>
+                </div>
+            </div>
+            <h2>Redes Sociales</h2>
+            <div id="redes">
+                <a href="#"><img id="insta" src="img/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img id="face" src="img/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img id="twi" src="img/twitter.svg" alt="Twitter"></a>
+            </div>
+        </div>
+        <div>
+            <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.663314293844!2d-74.11716188523786!3d4.653995896619306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b8ef87f4337%3A0x8c699799d258ea21!2sTerminal%20de%20Transporte%20S.A.!5e0!3m2!1ses!2sco!4v1664067338914!5m2!1ses!2sco" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</body>
+<script>
+
+function mostrar(n){
+    let elem = document.getElementById(`info-ruta${n}`);
+    elem.style.display = elem.style.display === 'none' ? 'block' : 'none'; /*Esto es lo mismo que un if - else en una sola línea*/
+}
+/*
+
+function mostrarRutas(n){
+    document.getElementById('info-ruta' + n).style.display = "block";
+}
+document.getElementById('ruta1').onclick = () =>{
+    mostrarRutas(1);
+}
+document.getElementById('ruta2').onclick = () =>{
+    mostrarRutas(2);
+}
+document.getElementById('ruta3').onclick = () =>{
+    mostrarRutas(3);
+}
+
+document.getElementById('ruta2').onclick = mostrarRutas;
+document.getElementById('ruta3').onclick = mostrarRutas;
+
+document.getElementById('ruta2').onclick = () => { 
+    document.querySelector('.info-rutas').style.display = "block";
+}
+
+*/
+
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="estilos.css"> 
+</head>
+<body style="align-items: center;">
+    <div id="barra" class="flex-nav">
+        <a href="index.html">EasyTrip</a>
+        <div class="comprimir">
+            <button class="boton">Menú</button>
+            <div class="contenido">
+                <a href="#info-empre">¿Quienes somos?</a>
+                <a href="#contacto">Contactanos</a>
+                <a href="#rutas">Rutas</a>
+                <a href="#">Registrarse</a>
+                <a class="active" href="/inicioSesion.html">Iniciar Sesión</a>
+            </div>
+        </div>
+    </div>
+    <div id="sesion">
+        <h2>Iniciar sesión</h2>
+        <p>Ingresa tu usuario o correo</p><br><br><br>
+        
+        <form action="#"> <!-- 'action' es para poner el archivo que va a manejar esos datos -->
+            <fieldset>
+                <legend>Usuario o correo electrónico</legend>
+                <input type="text" id="usuario" name="usuario" placeholder="Usuario o correo electrónico" required>
+            </fieldset><br>
+            <a href="#">¿Olvidaste tu usuario?</a><br><br>
+            <a href="/inicioEasyTrip.html">Registrarse</a>
+            <button id="butSub" type="submit">Siguiente</button>
+        </form>
+       
+        <!-- 
+            <form>
+                <label for="clave">Clave</label><br>
+                <input type="text" id="clave" name="clave" placeholder="clave"><br><br>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        -->
+    </div>
+</body>
+</html>
